@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of Zaid Shaikh, a student interested in web development, HTML, CSS, Python and programming.">
+
     <title>Zaid Shaikh | Official Website</title>
 
     <style>
@@ -39,6 +41,7 @@
             margin: 0 10px;
             font-weight: bold;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -56,7 +59,12 @@
             background: linear-gradient(135deg, #070b14, #111c33);
         }
 
-        /* LOGO */
+        /* HERO FADE ANIMATION */
+        .hero > div {
+            animation: fadeUp 1.2s ease-out;
+        }
+
+        /* ===== LOGO ===== */
         .logo {
             width: 125px;
             height: 125px;
@@ -68,6 +76,8 @@
             background: #111827;
             border: 3px solid #38bdf8;
             box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+
+            animation: logoGlow 2.5s infinite ease-in-out;
         }
 
         .logo span {
@@ -92,6 +102,7 @@
             margin-bottom: 28px;
         }
 
+        /* ===== BUTTONS ===== */
         .button {
             display: inline-block;
             padding: 13px 25px;
@@ -101,15 +112,25 @@
             border-radius: 30px;
             font-weight: bold;
             margin: 5px;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease,
+                        background 0.3s ease;
         }
 
         .button:hover {
             background: #7dd3fc;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
         }
 
         .instagram {
             background: #e1306c;
             color: white;
+        }
+
+        .instagram:hover {
+            background: #f45b8b;
         }
 
         /* ===== SECTIONS ===== */
@@ -125,6 +146,18 @@
             border-radius: 18px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+            transition: transform 0.35s ease,
+                        box-shadow 0.35s ease,
+                        border-color 0.35s ease;
+
+            animation: fadeUp 0.9s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.12);
+            border-color: #38bdf8;
         }
 
         h2 {
@@ -151,6 +184,16 @@
             border: 1px solid #334155;
             border-radius: 25px;
             font-weight: bold;
+
+            transition: transform 0.25s ease,
+                        background 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: #1e3150;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
         }
 
         /* ===== PROJECTS ===== */
@@ -159,6 +202,14 @@
             border-radius: 14px;
             padding: 20px;
             margin-bottom: 15px;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateX(7px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
         }
 
         .project h3 {
@@ -177,6 +228,32 @@
             background: #050810;
             color: #94a3b8;
             margin-top: 40px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            }
+
+            50% {
+                transform: scale(1.06);
+                box-shadow: 0 0 45px rgba(56, 189, 248, 0.55);
+            }
         }
 
         /* ===== MOBILE ===== */
@@ -219,10 +296,8 @@
         <a href="#contact">Contact</a>
     </nav>
 
-
     <!-- HOME -->
     <div class="hero" id="home">
-
         <div>
 
             <!-- ZS LOGO -->
@@ -241,13 +316,10 @@
             </a>
 
         </div>
-
     </div>
-
 
     <!-- ABOUT -->
     <section id="about">
-
         <div class="card">
 
             <h2>About Me 👤</h2>
@@ -260,13 +332,10 @@
             </p>
 
         </div>
-
     </section>
-
 
     <!-- EDUCATION -->
     <section id="education">
-
         <div class="card">
 
             <h2>Education 🎓</h2>
@@ -280,35 +349,27 @@
             </p>
 
         </div>
-
     </section>
-
 
     <!-- SKILLS -->
     <section id="skills">
-
         <div class="card">
 
             <h2>My Skills 💻</h2>
 
             <div class="skills">
-
                 <div class="skill">HTML</div>
                 <div class="skill">CSS</div>
                 <div class="skill">Python</div>
                 <div class="skill">Web Development</div>
                 <div class="skill">Programming</div>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- PROJECTS -->
     <section id="projects">
-
         <div class="card">
 
             <h2>My Projects 🚀</h2>
@@ -334,13 +395,10 @@
             </div>
 
         </div>
-
     </section>
-
 
     <!-- CONTACT -->
     <section id="contact">
-
         <div class="card">
 
             <h2>Contact Me 📩</h2>
@@ -362,9 +420,7 @@
             </div>
 
         </div>
-
     </section>
-
 
     <!-- FOOTER -->
     <footer>
