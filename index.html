@@ -13,7 +13,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-41JE6BPX2S');
     </script>
 
@@ -30,25 +29,65 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #070b14;
+            background: #050816;
             color: white;
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATED BACKGROUND ===== */
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: floating 8s infinite alternate ease-in-out;
+        }
+
+        body::before {
+            background: #38bdf8;
+            top: 10%;
+            left: -100px;
+        }
+
+        body::after {
+            background: #8b5cf6;
+            right: -100px;
+            bottom: 10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes floating {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(100px);
+            }
         }
 
         /* ===== NAVBAR ===== */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #0d1424;
-            padding: 16px 10px;
+            background: rgba(8, 14, 30, 0.88);
+            backdrop-filter: blur(15px);
+            padding: 15px 10px;
             text-align: center;
             border-bottom: 1px solid #26334d;
         }
 
         nav a {
-            color: white;
+            color: #e2e8f0;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 9px;
             font-weight: bold;
             font-size: 14px;
             transition: 0.3s;
@@ -56,79 +95,110 @@
 
         nav a:hover {
             color: #38bdf8;
+            text-shadow: 0 0 12px #38bdf8;
         }
 
         /* ===== HERO ===== */
+
         .hero {
-            min-height: 88vh;
+            min-height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #070b14, #111c33);
+            background:
+                radial-gradient(circle at center, #14254a 0%, #070b18 45%, #050816 100%);
+            position: relative;
         }
 
-        .hero > div {
-            animation: fadeUp 1.2s ease-out;
+        .hero-content {
+            animation: heroIn 1.2s ease;
+        }
+
+        @keyframes heroIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ===== LOGO ===== */
+
         .logo {
-            width: 125px;
-            height: 125px;
+            width: 135px;
+            height: 135px;
             margin: 0 auto 25px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #111827;
+            background: #0d1424;
             border: 3px solid #38bdf8;
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
-            animation: logoGlow 2.5s infinite ease-in-out;
+            box-shadow:
+                0 0 25px rgba(56,189,248,0.3),
+                inset 0 0 25px rgba(56,189,248,0.1);
+            animation: logoGlow 3s infinite ease-in-out;
         }
 
         .logo span {
-            font-size: 24px;
+            font-size: 30px;
             font-weight: bold;
             color: #38bdf8;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 25px rgba(56,189,248,0.25);
+            }
+
+            50% {
+                transform: scale(1.07);
+                box-shadow: 0 0 55px rgba(56,189,248,0.6);
+            }
         }
 
         .hero h1 {
             font-size: 52px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .hero h1 span {
             color: #38bdf8;
+            text-shadow: 0 0 20px rgba(56,189,248,0.35);
         }
 
         .hero h3 {
             color: #cbd5e1;
             font-weight: normal;
+            min-height: 25px;
             margin-bottom: 28px;
         }
 
         /* ===== BUTTONS ===== */
+
         .button {
             display: inline-block;
-            padding: 13px 25px;
+            padding: 14px 27px;
             background: #38bdf8;
-            color: #07111f;
+            color: #06101c;
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
-            margin: 5px;
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease,
-                        background 0.3s ease;
+            margin: 6px;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(56,189,248,0.15);
         }
 
         .button:hover {
-            background: #7dd3fc;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(56,189,248,0.35);
         }
 
         .instagram {
@@ -138,9 +208,32 @@
 
         .instagram:hover {
             background: #f45b8b;
+            box-shadow: 0 12px 30px rgba(225,48,108,0.3);
+        }
+
+        /* ===== SCROLL DOWN ===== */
+
+        .scroll-down {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #94a3b8;
+            font-size: 13px;
+            animation: bounce 1.8s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, 10px);
+            }
         }
 
         /* ===== SECTIONS ===== */
+
         section {
             max-width: 950px;
             margin: 30px auto;
@@ -148,21 +241,18 @@
         }
 
         .card {
-            background: #0d1424;
+            background: rgba(13,20,36,0.88);
             border: 1px solid #26334d;
-            border-radius: 18px;
+            border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.35s ease,
-                        box-shadow 0.35s ease,
-                        border-color 0.35s ease;
-            animation: fadeUp 0.9s ease-out;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            transition: 0.4s;
         }
 
         .card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 15px 35px rgba(56, 189, 248, 0.12);
+            transform: translateY(-8px);
             border-color: #38bdf8;
+            box-shadow: 0 20px 45px rgba(56,189,248,0.12);
         }
 
         h2 {
@@ -176,7 +266,21 @@
             line-height: 1.8;
         }
 
+        /* ===== SCROLL REVEAL ===== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* ===== SKILLS ===== */
+
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -189,77 +293,78 @@
             border: 1px solid #334155;
             border-radius: 25px;
             font-weight: bold;
-            transition: transform 0.25s ease,
-                        background 0.25s ease,
-                        box-shadow 0.25s ease;
+            transition: 0.3s;
+            cursor: default;
         }
 
         .skill:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: #1e3150;
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
+            transform: translateY(-6px) scale(1.05);
+            border-color: #38bdf8;
+            box-shadow: 0 8px 25px rgba(56,189,248,0.2);
         }
 
         /* ===== PROJECTS ===== */
+
         .project {
             background: #162139;
-            border-radius: 14px;
+            border-radius: 15px;
             padding: 20px;
             margin-bottom: 15px;
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+            border: 1px solid transparent;
+            transition: 0.3s;
         }
 
         .project:hover {
-            transform: translateX(7px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
+            transform: translateX(8px);
+            border-color: #38bdf8;
+            box-shadow: 0 8px 25px rgba(56,189,248,0.15);
         }
 
         .project h3 {
             margin-bottom: 8px;
         }
 
-        /* ===== CONTACT ===== */
-        .contact-buttons {
-            margin-top: 20px;
-        }
-
         /* ===== FOOTER ===== */
+
         footer {
             text-align: center;
             padding: 30px 15px;
-            background: #050810;
+            background: #03050b;
             color: #94a3b8;
             margin-top: 40px;
         }
 
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
+        /* ===== TOP BUTTON ===== */
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #topBtn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #38bdf8;
+            color: #06101c;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(56,189,248,0.3);
         }
 
-        @keyframes logoGlow {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
-            }
-
-            50% {
-                transform: scale(1.06);
-                box-shadow: 0 0 45px rgba(56, 189, 248, 0.55);
-            }
+        #topBtn:hover {
+            transform: translateY(-4px);
         }
 
         /* ===== MOBILE ===== */
+
         @media (max-width: 600px) {
+
+            .hero {
+                min-height: 88vh;
+            }
 
             .hero h1 {
                 font-size: 38px;
@@ -282,6 +387,15 @@
             .card {
                 padding: 22px;
             }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .logo {
+                width: 115px;
+                height: 115px;
+            }
         }
     </style>
 </head>
@@ -300,27 +414,33 @@
 
     <!-- HOME -->
     <div class="hero" id="home">
-        <div>
+
+        <div class="hero-content">
 
             <div class="logo">
                 <span>ZS</span>
             </div>
 
-            <h1>Hi, I'm <span>Zaid Shaikh</span> 👋</h1>
+            <h1>
+                Hi, I'm <span>Zaid Shaikh</span> 👋
+            </h1>
 
-            <h3>
-                Student • Web Development • Programming
-            </h3>
+            <h3 id="typing"></h3>
 
             <a class="button" href="#about">
                 Explore My Website 🚀
             </a>
 
         </div>
+
+        <div class="scroll-down">
+            ↓ Scroll to explore
+        </div>
+
     </div>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="reveal">
         <div class="card">
 
             <h2>About Me 👤</h2>
@@ -336,14 +456,12 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education">
+    <section id="education" class="reveal">
         <div class="card">
 
             <h2>Education 🎓</h2>
 
-            <p>
-                <strong>12th Standard</strong>
-            </p>
+            <p><strong>12th Standard</strong></p>
 
             <p>
                 Currently learning programming and web development.
@@ -353,7 +471,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="reveal">
         <div class="card">
 
             <h2>My Skills 💻</h2>
@@ -370,7 +488,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="reveal">
         <div class="card">
 
             <h2>My Projects 🚀</h2>
@@ -399,7 +517,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="reveal">
         <div class="card">
 
             <h2>Contact Me 📩</h2>
@@ -409,15 +527,14 @@
                 You can connect with me on Instagram.
             </p>
 
-            <div class="contact-buttons">
-
+            <div>
                 <a
                     class="button instagram"
                     href="https://www.instagram.com/zaid_shaikh_05_/"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
                     Instagram 📸
                 </a>
-
             </div>
 
         </div>
@@ -425,12 +542,77 @@
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 Zaid Shaikh. All Rights Reserved.
-        </p>
-
+        <p>© 2026 Zaid Shaikh. All Rights Reserved.</p>
     </footer>
+
+    <!-- TOP BUTTON -->
+    <button id="topBtn" onclick="goTop()">↑</button>
+
+    <script>
+
+        /* ===== TYPING EFFECT ===== */
+
+        const text = "Student • Web Development • Programming";
+        const typing = document.getElementById("typing");
+
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                typing.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 65);
+            }
+        }
+
+        typeText();
+
+
+        /* ===== SCROLL REVEAL ===== */
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+
+            reveals.forEach(element => {
+
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 80) {
+                    element.classList.add("show");
+                }
+
+            });
+
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+
+        /* ===== TOP BUTTON ===== */
+
+        const topBtn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 400) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+
+        });
+
+        function goTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
 
 </body>
 </html>
