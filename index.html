@@ -7,6 +7,16 @@
 
     <title>Zaid Shaikh | Official Website</title>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-41JE6BPX2S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-41JE6BPX2S');
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -59,7 +69,6 @@
             background: linear-gradient(135deg, #070b14, #111c33);
         }
 
-        /* HERO FADE ANIMATION */
         .hero > div {
             animation: fadeUp 1.2s ease-out;
         }
@@ -76,7 +85,6 @@
             background: #111827;
             border: 3px solid #38bdf8;
             box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
-
             animation: logoGlow 2.5s infinite ease-in-out;
         }
 
@@ -112,7 +120,6 @@
             border-radius: 30px;
             font-weight: bold;
             margin: 5px;
-
             transition: transform 0.3s ease,
                         box-shadow 0.3s ease,
                         background 0.3s ease;
@@ -146,11 +153,9 @@
             border-radius: 18px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
             transition: transform 0.35s ease,
                         box-shadow 0.35s ease,
                         border-color 0.35s ease;
-
             animation: fadeUp 0.9s ease-out;
         }
 
@@ -184,7 +189,6 @@
             border: 1px solid #334155;
             border-radius: 25px;
             font-weight: bold;
-
             transition: transform 0.25s ease,
                         background 0.25s ease,
                         box-shadow 0.25s ease;
@@ -202,7 +206,6 @@
             border-radius: 14px;
             padding: 20px;
             margin-bottom: 15px;
-
             transition: transform 0.3s ease,
                         box-shadow 0.3s ease;
         }
@@ -231,7 +234,6 @@
         }
 
         /* ===== ANIMATIONS ===== */
-
         @keyframes fadeUp {
             from {
                 opacity: 0;
@@ -300,7 +302,6 @@
     <div class="hero" id="home">
         <div>
 
-            <!-- ZS LOGO -->
             <div class="logo">
                 <span>ZS</span>
             </div>
