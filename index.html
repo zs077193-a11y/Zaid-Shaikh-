@@ -1,1729 +1,1864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Official website of Zaid Shaikh - Student, Web Development and Programming enthusiast.">
+
+<title>Zaid Shaikh | Official Website</title>
+
+<!-- =====================================================
+     GOOGLE ANALYTICS
+===================================================== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-41JE6BPX2S"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-41JE6BPX2S');
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-41JE6BPX2S');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Official website of Zaid Shaikh, a student interested in web development, HTML, CSS, Python and programming."
-    >
-
-    <title>Zaid Shaikh | Official Website</title>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-41JE6BPX2S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-41JE6BPX2S');
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- YAHAN Google Analytics code paste karo -->
-
-    <title>Zaid Shaikh | Official Website</title>
-</head>
-    </script>
-
-    <style>
-
-        /* =========================================
-           RESET
-        ========================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #03030b;
-            color: white;
-            overflow-x: hidden;
-        }
-
-
-        /* =========================================
-           SCROLL PROGRESS
-        ========================================= */
-
-        #progressBar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
-            z-index: 10000;
-            box-shadow: 0 0 12px #8b5cf6;
-        }
-
-
-        /* =========================================
-           PARTICLES
-        ========================================= */
-
-        #particles {
-            position: fixed;
-            inset: 0;
-            overflow: hidden;
-            pointer-events: none;
-            z-index: -3;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: #a78bfa;
-            box-shadow: 0 0 10px #8b5cf6;
-            animation: starMove linear infinite;
-        }
-
-        @keyframes starMove {
-
-            from {
-                transform: translateY(110vh);
-                opacity: 0;
-            }
-
-            15% {
-                opacity: 1;
-            }
-
-            85% {
-                opacity: 1;
-            }
-
-            to {
-                transform: translateY(-10vh);
-                opacity: 0;
-            }
-        }
-
-
-        /* =========================================
-           MOUSE GLOW
-        ========================================= */
-
-        #mouseGlow {
-            position: fixed;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-
-            background: radial-gradient(
-                circle,
-                rgba(139, 92, 246, 0.18) 0%,
-                rgba(6, 182, 212, 0.08) 35%,
-                transparent 70%
-            );
-
-            transform: translate(-50%, -50%);
-            transition: left 0.08s linear, top 0.08s linear;
-        }
-
-
-        /* =========================================
-           WELCOME SCREEN
-        ========================================= */
-
-        #welcomeScreen {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(76, 29, 149, 0.30),
-                    transparent 40%
-                ),
-                #03030b;
-
-            opacity: 1;
-            visibility: visible;
-
-            transition:
-                opacity 0.8s ease,
-                visibility 0.8s ease;
-        }
-
-        #welcomeScreen.hide {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
 
-        .welcome-content {
-            animation: welcomeIn 1s ease;
-        }
+<!-- =====================================================
+     CSS
+===================================================== -->
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .welcome-logo {
-            width: 100px;
-            height: 100px;
+html {
+    scroll-behavior: smooth;
+}
 
-            margin: 0 auto 22px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #03030b;
+    color: white;
+    overflow-x: hidden;
+}
 
-            border: 3px solid #8b5cf6;
-            border-radius: 50%;
+/* =====================================================
+   SCROLL PROGRESS
+===================================================== */
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+    z-index: 10000;
+    box-shadow: 0 0 15px #8b5cf6;
+}
 
-            color: #a78bfa;
-            font-size: 28px;
-            font-weight: bold;
+/* =====================================================
+   PARTICLES
+===================================================== */
 
-            box-shadow:
-                0 0 30px rgba(139, 92, 246, 0.5),
-                0 0 70px rgba(6, 182, 212, 0.15);
+#particles {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -3;
+}
 
-            animation: welcomeLogo 2s infinite ease-in-out;
-        }
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: #a78bfa;
+    box-shadow: 0 0 10px #8b5cf6;
+    animation: starMove linear infinite;
+}
 
-        .welcome-content h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+@keyframes starMove {
 
-        .welcome-content p {
-            color: #cbd5e1;
-        }
+    from {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
 
-        .loader {
-            width: 45px;
-            height: 45px;
+    15%,
+    85% {
+        opacity: 1;
+    }
 
-            margin: 25px auto 0;
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
 
-            border: 3px solid #27213f;
-            border-top-color: #a78bfa;
-            border-radius: 50%;
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
 
-            animation: spin 1s linear infinite;
-        }
+body::before,
+body::after {
 
-        @keyframes welcomeIn {
+    content: "";
 
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
+    position: fixed;
 
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+    width: 320px;
+    height: 320px;
 
-        @keyframes welcomeLogo {
+    border-radius: 50%;
 
-            0%, 100% {
-                transform: scale(1);
-            }
+    filter: blur(100px);
 
-            50% {
-                transform: scale(1.08);
-            }
-        }
+    opacity: 0.16;
 
-        @keyframes spin {
+    z-index: -2;
 
-            to {
-                transform: rotate(360deg);
-            }
-        }
+    animation: floating 8s infinite alternate ease-in-out;
+}
 
+body::before {
 
-        /* =========================================
-           BACKGROUND GLOW
-        ========================================= */
+    background: #7c3aed;
 
-        body::before,
-        body::after {
-            content: "";
-            position: fixed;
+    top: 5%;
+    left: -130px;
+}
 
-            width: 300px;
-            height: 300px;
+body::after {
 
-            border-radius: 50%;
-            filter: blur(100px);
+    background: #06b6d4;
 
-            opacity: 0.15;
+    right: -130px;
+    bottom: 5%;
 
-            z-index: -2;
+    animation-delay: 2s;
+}
 
-            animation: floating 8s infinite alternate ease-in-out;
-        }
+@keyframes floating {
 
-        body::before {
-            background: #7c3aed;
-            top: 5%;
-            left: -120px;
-        }
+    from {
+        transform: translateY(0);
+    }
 
-        body::after {
-            background: #06b6d4;
-            right: -120px;
-            bottom: 5%;
+    to {
+        transform: translateY(100px);
+    }
+}
 
-            animation-delay: 2s;
-        }
+/* =====================================================
+   MOUSE GLOW
+===================================================== */
 
-        @keyframes floating {
+#mouseGlow {
 
-            from {
-                transform: translateY(0);
-            }
+    position: fixed;
 
-            to {
-                transform: translateY(100px);
-            }
-        }
+    width: 300px;
+    height: 300px;
 
+    border-radius: 50%;
 
-        /* =========================================
-           NAVBAR
-        ========================================= */
+    pointer-events: none;
 
-        nav {
-            position: sticky;
-            top: 0;
+    z-index: -1;
 
-            z-index: 1000;
+    background: radial-gradient(
+        circle,
+        rgba(139,92,246,0.18),
+        rgba(6,182,212,0.08) 35%,
+        transparent 70%
+    );
 
-            background: rgba(3, 3, 11, 0.82);
-            backdrop-filter: blur(18px);
+    transform: translate(-50%, -50%);
+}
 
-            padding: 15px 10px;
+/* =====================================================
+   WELCOME SCREEN
+===================================================== */
 
-            text-align: center;
+#welcomeScreen {
 
-            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+    position: fixed;
 
-            box-shadow:
-                0 5px 30px rgba(0, 0, 0, 0.3);
-        }
+    inset: 0;
 
-        nav a {
-            position: relative;
+    z-index: 9999;
 
-            display: inline-block;
+    display: flex;
 
-            color: #e2e8f0;
-            text-decoration: none;
+    justify-content: center;
 
-            margin: 5px 9px;
+    align-items: center;
 
-            font-weight: bold;
-            font-size: 14px;
+    text-align: center;
 
-            transition: 0.3s;
-        }
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(76,29,149,0.35),
+            transparent 45%
+        ),
+        #03030b;
 
-        nav a::after {
-            content: "";
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
 
-            position: absolute;
+#welcomeScreen.hide {
 
-            left: 50%;
-            bottom: -7px;
+    opacity: 0;
 
-            width: 0;
-            height: 2px;
+    visibility: hidden;
 
-            background: linear-gradient(
-                90deg,
-                #8b5cf6,
-                #06b6d4
-            );
+    pointer-events: none;
+}
 
-            transform: translateX(-50%);
+.welcome-content {
 
-            transition: 0.3s;
-        }
+    animation: welcomeIn 1s ease;
+}
 
-        nav a:hover {
-            color: #a78bfa;
+.welcome-logo {
 
-            text-shadow:
-                0 0 12px #8b5cf6;
-        }
+    width: 105px;
+    height: 105px;
 
-        nav a:hover::after {
-            width: 100%;
-        }
+    margin: 0 auto 22px;
 
+    border: 3px solid #8b5cf6;
 
-        /* =========================================
-           HERO
-        ========================================= */
+    border-radius: 50%;
 
-        .hero {
-            min-height: 90vh;
+    display: flex;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
 
-            text-align: center;
+    color: #a78bfa;
 
-            padding: 40px 20px;
+    font-size: 30px;
 
-            position: relative;
+    font-weight: bold;
 
-            background:
-                radial-gradient(
-                    circle at 20% 30%,
-                    rgba(124, 58, 237, 0.25),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 80% 70%,
-                    rgba(6, 182, 212, 0.18),
-                    transparent 30%
-                );
-        }
+    box-shadow:
+        0 0 30px rgba(139,92,246,0.5),
+        0 0 70px rgba(6,182,212,0.15);
 
-        .hero-content {
-            animation: heroIn 1.2s ease;
-        }
+    animation: welcomeLogo 2s infinite ease-in-out;
+}
 
-        @keyframes heroIn {
+.welcome-content h1 {
 
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
+    font-size: 40px;
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    margin-bottom: 10px;
+}
 
+.welcome-content p {
 
-        /* =========================================
-           MAIN LOGO
-        ========================================= */
+    color: #cbd5e1;
+}
 
-        .logo {
-            width: 140px;
-            height: 140px;
+.loader {
 
-            margin: 0 auto 25px;
+    width: 45px;
+    height: 45px;
 
-            border-radius: 50%;
+    margin: 25px auto 0;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    border: 3px solid #27213f;
 
-            background: rgba(15, 10, 35, 0.8);
+    border-top-color: #a78bfa;
 
-            border: 3px solid #8b5cf6;
+    border-radius: 50%;
 
-            box-shadow:
-                0 0 30px rgba(139, 92, 246, 0.4),
-                inset 0 0 30px rgba(6, 182, 212, 0.12);
+    animation: spin 1s linear infinite;
+}
 
-            animation: logoGlow 3s infinite ease-in-out;
-        }
+@keyframes welcomeIn {
 
-        .logo span {
-            font-size: 31px;
-            font-weight: bold;
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 
-            color: #a78bfa;
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-            letter-spacing: 2px;
+@keyframes welcomeLogo {
 
-            text-shadow:
-                0 0 15px #8b5cf6;
-        }
+    0%,
+    100% {
+        transform: scale(1);
+    }
 
-        @keyframes logoGlow {
+    50% {
+        transform: scale(1.08);
+    }
+}
 
-            0%, 100% {
-                transform: scale(1);
+@keyframes spin {
 
-                box-shadow:
-                    0 0 25px rgba(139, 92, 246, 0.3);
-            }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-            50% {
-                transform: scale(1.07);
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-                box-shadow:
-                    0 0 55px rgba(139, 92, 246, 0.6);
-            }
-        }
+nav {
 
+    position: sticky;
 
-        /* =========================================
-           HERO TEXT
-        ========================================= */
+    top: 0;
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
+    z-index: 1000;
 
-        .hero h1 span {
-            color: #a78bfa;
+    background: rgba(3,3,11,0.82);
 
-            text-shadow:
-                0 0 10px rgba(139, 92, 246, 0.8),
-                0 0 30px rgba(6, 182, 212, 0.35);
-        }
+    backdrop-filter: blur(18px);
 
-        .hero h3 {
-            color: #cbd5e1;
+    padding: 15px 10px;
 
-            font-weight: normal;
+    text-align: center;
 
-            min-height: 25px;
+    border-bottom:
+        1px solid rgba(139,92,246,0.3);
 
-            margin-bottom: 28px;
-        }
+    box-shadow:
+        0 5px 30px rgba(0,0,0,0.3);
+}
 
+nav a {
 
-        /* =========================================
-           BUTTONS
-        ========================================= */
+    position: relative;
 
-        .button {
-            display: inline-block;
+    display: inline-block;
 
-            padding: 14px 27px;
+    color: #e2e8f0;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #8b5cf6,
-                    #06b6d4
-                );
+    text-decoration: none;
 
-            color: white;
+    margin: 5px 9px;
 
-            text-decoration: none;
+    font-weight: bold;
 
-            border-radius: 30px;
+    font-size: 14px;
 
-            font-weight: bold;
+    transition: 0.3s;
+}
 
-            margin: 6px;
+nav a::after {
 
-            transition: 0.3s;
+    content: "";
 
-            box-shadow:
-                0 8px 25px rgba(139, 92, 246, 0.25);
-        }
+    position: absolute;
 
-        .button:hover {
-            transform:
-                translateY(-5px)
-                scale(1.04);
+    left: 50%;
 
-            box-shadow:
-                0 12px 35px rgba(139, 92, 246, 0.45);
-        }
+    bottom: -7px;
 
-        .instagram {
-            background:
-                linear-gradient(
-                    135deg,
-                    #833ab4,
-                    #fd1d1d,
-                    #fcb045
-                );
-        }
+    width: 0;
 
-        .instagram:hover {
-            background:
-                linear-gradient(
-                    135deg,
-                    #a855f7,
-                    #fb7185,
-                    #fbbf24
-                );
-        }
+    height: 2px;
 
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #06b6d4
+        );
 
-        /* =========================================
-           SCROLL DOWN
-        ========================================= */
+    transform: translateX(-50%);
 
-        .scroll-down {
-            position: absolute;
+    transition: 0.3s;
+}
 
-            bottom: 25px;
-            left: 50%;
+nav a:hover {
 
-            transform: translateX(-50%);
+    color: #a78bfa;
 
-            color: #94a3b8;
+    text-shadow:
+        0 0 12px #8b5cf6;
+}
 
-            font-size: 13px;
+nav a:hover::after {
 
-            animation: bounce 1.8s infinite;
-        }
+    width: 100%;
+}
 
-        @keyframes bounce {
+/* =====================================================
+   HERO
+===================================================== */
 
-            0%, 100% {
-                transform: translate(-50%, 0);
-            }
+.hero {
 
-            50% {
-                transform: translate(-50%, 10px);
-            }
-        }
+    min-height: 90vh;
 
+    display: flex;
 
-        /* =========================================
-           SECTIONS
-        ========================================= */
+    justify-content: center;
 
-        section {
-            max-width: 950px;
+    align-items: center;
 
-            margin: 30px auto;
+    text-align: center;
 
-            padding: 35px 25px;
-        }
+    padding: 40px 20px;
 
+    position: relative;
 
-        /* =========================================
-           GLASS CARDS
-        ========================================= */
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(124,58,237,0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(6,182,212,0.18),
+            transparent 30%
+        );
+}
 
-        .card {
-            position: relative;
+.hero-content {
 
-            overflow: hidden;
+    animation: heroIn 1.2s ease;
+}
 
-            background:
-                rgba(12, 10, 28, 0.72);
+@keyframes heroIn {
 
-            border:
-                1px solid rgba(139, 92, 246, 0.28);
+    from {
 
-            border-radius: 20px;
+        opacity: 0;
 
-            padding: 30px;
+        transform:
+            translateY(40px);
+    }
 
-            backdrop-filter: blur(14px);
+    to {
 
-            transform-style: preserve-3d;
+        opacity: 1;
 
-            transition:
-                transform 0.15s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+        transform:
+            translateY(0);
+    }
+}
 
-            box-shadow:
-                0 15px 45px rgba(0, 0, 0, 0.35);
-        }
+/* =====================================================
+   LOGO
+===================================================== */
 
-        .card::before {
-            content: "";
+.logo {
 
-            position: absolute;
+    width: 140px;
+    height: 140px;
 
-            width: 200px;
-            height: 200px;
+    margin: 0 auto 25px;
 
-            left: var(--mouse-x, 50%);
-            top: var(--mouse-y, 50%);
+    border-radius: 50%;
 
-            transform:
-                translate(-50%, -50%);
+    display: flex;
 
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(139, 92, 246, 0.20),
-                    transparent 70%
-                );
+    justify-content: center;
+    align-items: center;
 
-            pointer-events: none;
-        }
+    background:
+        rgba(15,10,35,0.8);
 
-        .card::after {
-            content: "";
+    border:
+        3px solid #8b5cf6;
 
-            position: absolute;
+    box-shadow:
+        0 0 30px rgba(139,92,246,0.4),
+        inset 0 0 30px rgba(6,182,212,0.12);
 
-            inset: 0;
+    animation:
+        logoGlow 3s infinite ease-in-out;
+}
 
-            border-radius: inherit;
+.logo span {
 
-            border: 1px solid transparent;
+    font-size: 31px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(139, 92, 246, 0.5),
-                    rgba(6, 182, 212, 0.2),
-                    transparent
-                ) border-box;
+    font-weight: bold;
 
-            -webkit-mask:
-                linear-gradient(#fff 0 0) padding-box,
-                linear-gradient(#fff 0 0);
+    color: #a78bfa;
 
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    letter-spacing: 2px;
 
-            opacity: 0;
+    text-shadow:
+        0 0 15px #8b5cf6;
+}
 
-            transition: 0.3s;
+@keyframes logoGlow {
 
-            pointer-events: none;
-        }
+    0%,
+    100% {
 
-        .card:hover::after {
-            opacity: 1;
-        }
+        transform: scale(1);
 
+        box-shadow:
+            0 0 25px
+            rgba(139,92,246,0.3);
+    }
 
-        /* =========================================
-           HEADINGS & TEXT
-        ========================================= */
+    50% {
 
-        h2 {
-            color: #a78bfa;
+        transform: scale(1.07);
 
-            margin-bottom: 18px;
+        box-shadow:
+            0 0 55px
+            rgba(139,92,246,0.6);
+    }
+}
 
-            font-size: 30px;
+/* =====================================================
+   HERO TEXT
+===================================================== */
 
-            text-shadow:
-                0 0 15px rgba(139, 92, 246, 0.35);
-        }
+.hero h1 {
 
-        p {
-            color: #cbd5e1;
+    font-size: 52px;
 
-            line-height: 1.8;
-        }
+    margin-bottom: 15px;
+}
 
+.hero h1 span {
 
-        /* =========================================
-           SCROLL REVEAL
-        ========================================= */
+    color: #a78bfa;
 
-        .reveal {
-            opacity: 0;
+    text-shadow:
+        0 0 10px rgba(139,92,246,0.8),
+        0 0 30px rgba(6,182,212,0.35);
+}
 
-            transform: translateY(45px);
+.hero h3 {
 
-            transition:
-                opacity 0.8s ease,
-                transform 0.8s ease;
-        }
+    color: #cbd5e1;
 
-        .reveal.show {
-            opacity: 1;
+    font-weight: normal;
 
-            transform: translateY(0);
-        }
+    min-height: 25px;
 
+    margin-bottom: 28px;
+}
 
-        /* =========================================
-           SKILLS
-        ========================================= */
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-        .skills {
-            display: flex;
+.button {
 
-            flex-wrap: wrap;
+    display: inline-block;
 
-            gap: 12px;
+    padding: 14px 27px;
 
-            margin-top: 15px;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #06b6d4
+        );
 
-        .skill {
-            padding: 12px 18px;
+    color: white;
 
-            background:
-                rgba(20, 15, 45, 0.85);
+    text-decoration: none;
 
-            border:
-                1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 30px;
 
-            border-radius: 25px;
+    font-weight: bold;
 
-            font-weight: bold;
+    margin: 6px;
 
-            transition: 0.3s;
+    transition: 0.3s;
 
-            cursor: default;
-        }
+    box-shadow:
+        0 8px 25px
+        rgba(139,92,246,0.25);
+}
 
-        .skill:hover {
-            transform:
-                translateY(-6px)
-                scale(1.05);
+.button:hover {
 
-            background:
-                rgba(76, 29, 149, 0.35);
+    transform:
+        translateY(-5px)
+        scale(1.04);
 
-            border-color: #a78bfa;
+    box-shadow:
+        0 12px 35px
+        rgba(139,92,246,0.45);
+}
 
-            box-shadow:
-                0 8px 25px rgba(139, 92, 246, 0.25);
-        }
+.instagram {
 
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #fd1d1d,
+            #fcb045
+        );
+}
 
-        /* =========================================
-           SKILL BARS
-        ========================================= */
+.scroll-down {
 
-        .skill-bar {
-            margin-top: 18px;
-        }
+    position: absolute;
 
-        .skill-title {
-            display: flex;
+    bottom: 25px;
 
-            justify-content: space-between;
+    left: 50%;
 
-            margin-bottom: 7px;
+    transform:
+        translateX(-50%);
 
-            color: #e2e8f0;
+    color: #94a3b8;
 
-            font-weight: bold;
-        }
+    font-size: 13px;
 
-        .bar {
-            width: 100%;
-            height: 8px;
+    animation:
+        bounce 1.8s infinite;
+}
 
-            background: #17132a;
+@keyframes bounce {
 
-            border-radius: 20px;
+    0%,
+    100% {
+        transform:
+            translate(-50%,0);
+    }
 
-            overflow: hidden;
-        }
+    50% {
+        transform:
+            translate(-50%,10px);
+    }
+}
 
-        .bar span {
-            display: block;
+/* =====================================================
+   SECTIONS
+===================================================== */
 
-            height: 100%;
+section {
 
-            width: 0;
+    max-width: 950px;
 
-            border-radius: 20px;
+    margin: 30px auto;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #8b5cf6,
-                    #06b6d4
-                );
+    padding: 35px 25px;
+}
 
-            box-shadow:
-                0 0 15px rgba(139, 92, 246, 0.6);
+.card {
 
-            transition:
-                width 1.5s ease;
-        }
+    position: relative;
 
+    overflow: hidden;
 
-        /* =========================================
-           PROJECTS
-        ========================================= */
+    background:
+        rgba(12,10,28,0.72);
 
-        .project {
-            background:
-                rgba(20, 15, 45, 0.75);
+    border:
+        1px solid
+        rgba(139,92,246,0.28);
 
-            border-radius: 15px;
+    border-radius: 20px;
 
-            padding: 20px;
+    padding: 30px;
 
-            margin-bottom: 15px;
+    backdrop-filter: blur(14px);
 
-            border:
-                1px solid rgba(6, 182, 212, 0.15);
+    transform-style:
+        preserve-3d;
 
-            transition: 0.3s;
-        }
+    transition:
+        transform 0.15s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 
-        .project:hover {
-            transform: translateX(8px);
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.35);
+}
 
-            border-color: #06b6d4;
+.card:hover {
 
-            box-shadow:
-                0 8px 30px rgba(6, 182, 212, 0.18);
-        }
+    border-color:
+        rgba(139,92,246,0.55);
 
-        .project h3 {
-            margin-bottom: 8px;
-        }
-<!-- CERTIFICATES & ACHIEVEMENTS -->
-<section id="achievements" class="reveal">
-    <div class="card">
-        <h2>Certificates & Achievements 🏆</h2>
+    box-shadow:
+        0 20px 55px
+        rgba(139,92,246,0.12);
+}
 
-        <div class="project">
-            <h3>🎓 Certificates</h3>
-            <p>
-                My certificates and completed courses will be
-                added here.
-            </p>
-        </div>
+h2 {
 
-        <div class="project">
-            <h3>🚀 Achievements</h3>
-            <p>
-                My achievements and milestones will be
-                added here as I continue learning.
-            </p>
-        </div>
+    color: #a78bfa;
 
-    </div>
-</section>
+    margin-bottom: 18px;
 
-        /* =========================================
-           CONTACT
-        ========================================= */
+    font-size: 30px;
 
-        .contact-buttons {
-            margin-top: 20px;
-        }
+    text-shadow:
+        0 0 15px
+        rgba(139,92,246,0.35);
+}
 
+p {
 
-        /* =========================================
-           FOOTER
-        ========================================= */
+    color: #cbd5e1;
 
-        footer {
-            text-align: center;
+    line-height: 1.8;
+}
 
-            padding: 30px 15px;
+/* =====================================================
+   REVEAL
+===================================================== */
 
-            background: #020207;
+.reveal {
 
-            color: #94a3b8;
+    opacity: 0;
 
-            margin-top: 40px;
+    transform:
+        translateY(45px);
 
-            border-top:
-                1px solid rgba(139, 92, 246, 0.2);
-        }
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
 
+.reveal.show {
 
-        /* =========================================
-           BACK TO TOP
-        ========================================= */
+    opacity: 1;
 
-        #topBtn {
-            position: fixed;
+    transform:
+        translateY(0);
+}
 
-            right: 20px;
-            bottom: 20px;
+/* =====================================================
+   SKILLS
+===================================================== */
 
-            width: 48px;
-            height: 48px;
+.skills {
 
-            border: none;
+    display: flex;
 
-            border-radius: 50%;
+    flex-wrap: wrap;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #8b5cf6,
-                    #06b6d4
-                );
+    gap: 12px;
 
-            color: white;
+    margin-top: 15px;
+}
 
-            font-size: 20px;
-            font-weight: bold;
+.skill {
 
-            cursor: pointer;
+    padding: 12px 18px;
 
-            display: none;
+    background:
+        rgba(20,15,45,0.85);
 
-            z-index: 999;
+    border:
+        1px solid
+        rgba(139,92,246,0.3);
 
-            box-shadow:
-                0 5px 25px rgba(139, 92, 246, 0.35);
-        }
+    border-radius: 25px;
 
-        #topBtn:hover {
-            transform: translateY(-4px);
-        }
+    font-weight: bold;
 
+    transition: 0.3s;
+}
 
-        /* =========================================
-           MOBILE
-        ========================================= */
+.skill:hover {
 
-        @media (max-width: 600px) {
+    transform:
+        translateY(-6px)
+        scale(1.05);
 
-            #mouseGlow {
-                display: none;
-            }
+    background:
+        rgba(76,29,149,0.35);
 
-            .particle {
-                opacity: 0.7;
-            }
+    border-color:
+        #a78bfa;
 
-            .hero {
-                min-height: 88vh;
-            }
+    box-shadow:
+        0 8px 25px
+        rgba(139,92,246,0.25);
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+/* =====================================================
+   SKILL BARS
+===================================================== */
 
-            .hero h3 {
-                font-size: 16px;
-            }
+.skill-bar {
 
-            nav a {
-                margin: 5px 6px;
-            }
+    margin-top: 18px;
+}
 
-            section {
-                margin: 18px auto;
-                padding: 25px 15px;
-            }
+.skill-title {
 
-            .card {
-                padding: 22px;
+    display: flex;
 
-                transform: none !important;
-            }
+    justify-content:
+        space-between;
 
-            .card::before,
-            .card::after {
-                display: none;
-            }
+    margin-bottom: 7px;
 
-            h2 {
-                font-size: 26px;
-            }
+    color: #e2e8f0;
 
-            .logo {
-                width: 115px;
-                height: 115px;
-            }
+    font-weight: bold;
+}
 
-            .welcome-content h1 {
-                font-size: 32px;
-            }
-        }
+.bar {
 
-    </style>
+    width: 100%;
+
+    height: 8px;
+
+    background:
+        #17132a;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.bar span {
+
+    display: block;
+
+    height: 100%;
+
+    width: 0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #06b6d4
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(139,92,246,0.6);
+
+    transition:
+        width 1.5s ease;
+}
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.project {
+
+    background:
+        rgba(20,15,45,0.75);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid
+        rgba(6,182,212,0.15);
+
+    transition: 0.3s;
+}
+
+.project:hover {
+
+    transform:
+        translateX(8px);
+
+    border-color:
+        #06b6d4;
+
+    box-shadow:
+        0 8px 30px
+        rgba(6,182,212,0.18);
+}
+
+.project h3 {
+
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+   CERTIFICATES
+===================================================== */
+
+.certificate {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,0.12),
+            rgba(6,182,212,0.08)
+        );
+
+    border:
+        1px solid
+        rgba(139,92,246,0.3);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.certificate:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #a78bfa;
+
+    box-shadow:
+        0 10px 30px
+        rgba(139,92,246,0.2);
+}
+
+.certificate h3 {
+
+    color: #e9d5ff;
+
+    margin-bottom: 8px;
+}
+
+.certificate p {
+
+    margin-bottom: 5px;
+}
+
+.certificate-date {
+
+    font-size: 13px;
+
+    color: #94a3b8;
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-buttons {
+
+    margin-top: 20px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    background:
+        #020207;
+
+    color:
+        #94a3b8;
+
+    margin-top: 40px;
+
+    border-top:
+        1px solid
+        rgba(139,92,246,0.2);
+}
+
+/* =====================================================
+   TOP BUTTON
+===================================================== */
+
+#topBtn {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #06b6d4
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 999;
+
+    box-shadow:
+        0 5px 25px
+        rgba(139,92,246,0.35);
+}
+
+#topBtn:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #mouseGlow {
+        display: none;
+    }
+
+    .particle {
+        opacity: 0.7;
+    }
+
+    .hero {
+        min-height: 88vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    nav a {
+        margin: 5px 6px;
+        font-size: 13px;
+    }
+
+    section {
+        margin: 18px auto;
+        padding: 25px 15px;
+    }
+
+    .card {
+        padding: 22px;
+        transform: none !important;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .welcome-content h1 {
+        font-size: 32px;
+    }
+
+    .button {
+        padding: 13px 20px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- =========================================
-         PROGRESS BAR
-    ========================================== -->
+<!-- =====================================================
+     PROGRESS BAR
+===================================================== -->
 
-    <div id="progressBar"></div>
+<div id="progressBar"></div>
 
+<!-- =====================================================
+     PARTICLES
+===================================================== -->
 
-    <!-- =========================================
-         PARTICLES
-    ========================================== -->
+<div id="particles"></div>
 
-    <div id="particles"></div>
+<!-- =====================================================
+     MOUSE GLOW
+===================================================== -->
 
-    <div id="mouseGlow"></div>
+<div id="mouseGlow"></div>
 
+<!-- =====================================================
+     WELCOME SCREEN
+===================================================== -->
 
-    <!-- =========================================
-         WELCOME SCREEN
-    ========================================== -->
+<div id="welcomeScreen">
 
-    <div id="welcomeScreen">
+    <div class="welcome-content">
 
-        <div class="welcome-content">
+        <div class="welcome-logo">
+            ZS
+        </div>
 
-            <div class="welcome-logo">
-                ZS
-            </div>
+        <h1>
+            Welcome 👋
+        </h1>
 
-            <h1>
-                Welcome 👋
-            </h1>
+        <p>
+            Welcome to Zaid Shaikh's Website
+        </p>
+
+        <div class="loader"></div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#about">About</a>
+
+    <a href="#education">Education</a>
+
+    <a href="#skills">Skills</a>
+
+    <a href="#projects">Projects</a>
+
+    <a href="#achievements">Certificates</a>
+
+    <a href="#contact">Contact</a>
+
+</nav>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="logo">
+            <span>ZS</span>
+        </div>
+
+        <h1>
+            Hi, I'm
+            <span>Zaid Shaikh</span>
+            👋
+        </h1>
+
+        <h3 id="typing"></h3>
+
+        <a
+            class="button"
+            href="#about"
+        >
+            Explore My Website 🚀
+        </a>
+
+    </div>
+
+    <div class="scroll-down">
+        ↓ Scroll to explore
+    </div>
+
+</div>
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="reveal">
+
+    <div class="card">
+
+        <h2>
+            About Me 👤
+        </h2>
+
+        <p>
+            Hello! My name is Zaid Shaikh.
+            I am a student interested in Web Development,
+            Programming and Technology.
+            I enjoy learning new skills and creating websites.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education" class="reveal">
+
+    <div class="card">
+
+        <h2>
+            Education 🎓
+        </h2>
+
+        <div class="project">
+
+            <h3>
+                🎓 12th Standard
+            </h3>
 
             <p>
-                Welcome to Zaid Shaikh's Website
+                Currently learning programming,
+                web development and technology.
             </p>
-
-            <div class="loader"></div>
 
         </div>
 
     </div>
 
+</section>
 
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
+<!-- =====================================================
+     SKILLS
+===================================================== -->
 
-    <nav>
+<section id="skills" class="reveal">
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <div class="card">
 
-    </nav>
+        <h2>
+            My Skills 💻
+        </h2>
 
+        <div class="skills">
 
-    <!-- =========================================
-         HERO
-    ========================================== -->
-
-    <div class="hero" id="home">
-
-        <div class="hero-content">
-
-            <div class="logo">
-                <span>ZS</span>
+            <div class="skill">
+                HTML
             </div>
 
-            <h1>
-                Hi, I'm <span>Zaid Shaikh</span> 👋
-            </h1>
+            <div class="skill">
+                CSS
+            </div>
 
-            <h3 id="typing"></h3>
+            <div class="skill">
+                Python
+            </div>
+
+            <div class="skill">
+                Web Development
+            </div>
+
+            <div class="skill">
+                Programming
+            </div>
+
+        </div>
+
+        <!-- HTML & CSS -->
+
+        <div class="skill-bar">
+
+            <div class="skill-title">
+
+                <span>
+                    HTML & CSS
+                </span>
+
+                <span>
+                    90%
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <span data-width="90%"></span>
+
+            </div>
+
+        </div>
+
+        <!-- PYTHON -->
+
+        <div class="skill-bar">
+
+            <div class="skill-title">
+
+                <span>
+                    Python
+                </span>
+
+                <span>
+                    70%
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <span data-width="70%"></span>
+
+            </div>
+
+        </div>
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="skill-bar">
+
+            <div class="skill-title">
+
+                <span>
+                    Web Development
+                </span>
+
+                <span>
+                    80%
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <span data-width="80%"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="reveal">
+
+    <div class="card">
+
+        <h2>
+            My Projects 🚀
+        </h2>
+
+        <div class="project">
+
+            <h3>
+                🌐 Personal Website
+            </h3>
+
+            <p>
+                My personal website created using
+                HTML, CSS and JavaScript.
+            </p>
+
+        </div>
+
+        <div class="project">
+
+            <h3>
+                🚀 Future Projects
+            </h3>
+
+            <p>
+                More exciting projects coming soon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CERTIFICATES & ACHIEVEMENTS
+===================================================== -->
+
+<section id="achievements" class="reveal">
+
+    <div class="card">
+
+        <h2>
+            Certificates & Achievements 🏆
+        </h2>
+
+        <!-- CERTIFICATE -->
+
+        <div class="certificate">
+
+            <h3>
+                🎓 Certificates
+            </h3>
+
+            <p>
+                My certificates and completed courses
+                will be added here.
+            </p>
+
+            <p class="certificate-date">
+                📅 More certificates coming soon
+            </p>
+
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+
+        <div class="certificate">
+
+            <h3>
+                🚀 Achievements
+            </h3>
+
+            <p>
+                My achievements and milestones will be
+                added here as I continue learning.
+            </p>
+
+            <p class="certificate-date">
+                ⭐ More achievements coming soon
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="reveal">
+
+    <div class="card">
+
+        <h2>
+            Contact Me 📩
+        </h2>
+
+        <p>
+            Thanks for visiting my website!
+            You can connect with me on Instagram.
+        </p>
+
+        <div class="contact-buttons">
 
             <a
-                class="button"
-                href="#about"
+                class="button instagram"
+                href="https://www.instagram.com/zaid_shaikh_05_/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                Explore My Website 🚀
+                Instagram 📸
             </a>
 
         </div>
 
-        <div class="scroll-down">
-            ↓ Scroll to explore
-        </div>
-
     </div>
 
+</section>
 
-    <!-- =========================================
-         ABOUT
-    ========================================== -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-    <section
-        id="about"
-        class="reveal"
-    >
+<footer>
 
-        <div class="card">
+    <p>
+        © 2026 Zaid Shaikh.
+        All Rights Reserved.
+    </p>
 
-            <h2>
-                About Me 👤
-            </h2>
+</footer>
 
-            <p>
-                Hello! My name is Zaid Shaikh.
-                I am a student interested in Web Development,
-                Programming and Technology.
-                I enjoy learning new skills and creating websites.
-            </p>
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
 
-        </div>
+<button
+    id="topBtn"
+    aria-label="Back to top"
+>
+    ↑
+</button>
 
-    </section>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
+<script>
 
-    <!-- =========================================
-         EDUCATION
-    ========================================== -->
+/* =====================================================
+   WELCOME SCREEN
+===================================================== */
 
-    <section
-        id="education"
-        class="reveal"
-    >
+setTimeout(function () {
 
-        <div class="card">
+    const welcome =
+        document.getElementById("welcomeScreen");
 
-            <h2>
-                Education 🎓
-            </h2>
+    if (welcome) {
 
-            <p>
-                <strong>12th Standard</strong>
-            </p>
+        welcome.classList.add("hide");
 
-            <p>
-                Currently learning programming and web development.
-            </p>
+    }
 
-        </div>
+}, 2500);
 
-    </section>
 
+/* =====================================================
+   PARTICLES
+===================================================== */
 
-    <!-- =========================================
-         SKILLS
-    ========================================== -->
+const particles =
+    document.getElementById("particles");
 
-    <section
-        id="skills"
-        class="reveal"
-    >
+for (let i = 0; i < 70; i++) {
 
-        <div class="card">
+    const star =
+        document.createElement("div");
 
-            <h2>
-                My Skills 💻
-            </h2>
+    star.classList.add("particle");
 
-            <div class="skills">
+    star.style.left =
+        Math.random() * 100 + "%";
 
-                <div class="skill">
-                    HTML
-                </div>
+    star.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
 
-                <div class="skill">
-                    CSS
-                </div>
+    star.style.animationDelay =
+        (Math.random() * 10) + "s";
 
-                <div class="skill">
-                    Python
-                </div>
+    const size =
+        1 + Math.random() * 3;
 
-                <div class="skill">
-                    Web Development
-                </div>
+    star.style.width =
+        size + "px";
 
-                <div class="skill">
-                    Programming
-                </div>
+    star.style.height =
+        size + "px";
 
-            </div>
+    particles.appendChild(star);
+}
 
 
-            <!-- SKILL BARS -->
+/* =====================================================
+   MOUSE GLOW
+===================================================== */
 
-            <div class="skill-bar">
+const mouseGlow =
+    document.getElementById("mouseGlow");
 
-                <div class="skill-title">
-                    <span>HTML & CSS</span>
-                    <span>90%</span>
-                </div>
+document.addEventListener(
+    "mousemove",
+    function (event) {
 
-                <div class="bar">
-                    <span data-width="90%"></span>
-                </div>
+        mouseGlow.style.left =
+            event.clientX + "px";
 
-            </div>
+        mouseGlow.style.top =
+            event.clientY + "px";
 
+    }
+);
 
-            <div class="skill-bar">
 
-                <div class="skill-title">
-                    <span>Python</span>
-                    <span>70%</span>
-                </div>
+/* =====================================================
+   TYPING EFFECT
+===================================================== */
 
-                <div class="bar">
-                    <span data-width="70%"></span>
-                </div>
+const text =
+    "Student • Web Development • Programming";
 
-            </div>
+const typing =
+    document.getElementById("typing");
 
+let index = 0;
 
-            <div class="skill-bar">
+function typeText() {
 
-                <div class="skill-title">
-                    <span>Web Development</span>
-                    <span>80%</span>
-                </div>
+    if (index < text.length) {
 
-                <div class="bar">
-                    <span data-width="80%"></span>
-                </div>
+        typing.textContent +=
+            text.charAt(index);
 
-            </div>
+        index++;
 
-        </div>
+        setTimeout(
+            typeText,
+            60
+        );
+    }
+}
 
-    </section>
+typeText();
 
 
-    <!-- =========================================
-         PROJECTS
-    ========================================== -->
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
 
-    <section
-        id="projects"
-        class="reveal"
-    >
+const reveals =
+    document.querySelectorAll(".reveal");
 
-        <div class="card">
+function revealOnScroll() {
 
-            <h2>
-                My Projects 🚀
-            </h2>
+    reveals.forEach(function (element) {
 
-            <div class="project">
+        const windowHeight =
+            window.innerHeight;
 
-                <h3>
-                    🌐 Personal Website
-                </h3>
+        const elementTop =
+            element.getBoundingClientRect().top;
 
-                <p>
-                    My personal website created using HTML and CSS.
-                </p>
+        if (
+            elementTop <
+            windowHeight - 80
+        ) {
 
-            </div>
+            element.classList.add("show");
 
-
-            <div class="project">
-
-                <h3>
-                    🚀 Future Projects
-                </h3>
-
-                <p>
-                    More exciting projects coming soon.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         CONTACT
-    ========================================== -->
-
-    <section
-        id="contact"
-        class="reveal"
-    >
-
-        <div class="card">
-
-            <h2>
-                Contact Me 📩
-            </h2>
-
-            <p>
-                Thanks for visiting my website!
-                You can connect with me on Instagram.
-            </p>
-
-            <div class="contact-buttons">
-
-                <a
-                    class="button instagram"
-                    href="https://www.instagram.com/zaid_shaikh_05_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram 📸
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Zaid Shaikh. All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-    <!-- =========================================
-         TOP BUTTON
-    ========================================== -->
-
-    <button
-        id="topBtn"
-        aria-label="Back to top"
-    >
-        ↑
-    </button>
-
-
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
-
-    <script>
-
-        /* =========================================
-           WELCOME SCREEN
-        ========================================== */
-
-        setTimeout(function () {
-
-            const welcome =
-                document.getElementById("welcomeScreen");
-
-            if (welcome) {
-                welcome.classList.add("hide");
-            }
-
-        }, 2500);
-
-
-        /* =========================================
-           PARTICLES
-        ========================================== */
-
-        const particles =
-            document.getElementById("particles");
-
-        for (let i = 0; i < 70; i++) {
-
-            const star =
-                document.createElement("div");
-
-            star.classList.add("particle");
-
-            star.style.left =
-                Math.random() * 100 + "%";
-
-            star.style.animationDuration =
-                (5 + Math.random() * 10) + "s";
-
-            star.style.animationDelay =
-                (Math.random() * 10) + "s";
-
-            const size =
-                1 + Math.random() * 3;
-
-            star.style.width =
-                size + "px";
-
-            star.style.height =
-                size + "px";
-
-            particles.appendChild(star);
         }
 
+    });
+}
 
-        /* =========================================
-           MOUSE FOLLOW GLOW
-        ========================================== */
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
 
-        const mouseGlow =
-            document.getElementById("mouseGlow");
+revealOnScroll();
 
-        document.addEventListener(
-            "mousemove",
-            function (event) {
 
-                mouseGlow.style.left =
-                    event.clientX + "px";
+/* =====================================================
+   3D CARD TILT
+===================================================== */
 
-                mouseGlow.style.top =
-                    event.clientY + "px";
+const cards =
+    document.querySelectorAll(".card");
+
+cards.forEach(function (card) {
+
+    card.addEventListener(
+        "mousemove",
+        function (event) {
+
+            if (window.innerWidth <= 600)
+                return;
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX -
+                rect.left;
+
+            const y =
+                event.clientY -
+                rect.top;
+
+            const centerX =
+                rect.width / 2;
+
+            const centerY =
+                rect.height / 2;
+
+            const rotateX =
+                (centerY - y) / 22;
+
+            const rotateY =
+                (x - centerX) / 22;
+
+            card.style.transform =
+                `perspective(900px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-5px)`;
+
+        }
+    );
+
+    card.addEventListener(
+        "mouseleave",
+        function () {
+
+            card.style.transform =
+                "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   SKILL BAR ANIMATION
+===================================================== */
+
+const skillBars =
+    document.querySelectorAll(
+        ".bar span"
+    );
+
+let barsAnimated = false;
+
+function animateSkillBars() {
+
+    const skillsSection =
+        document.getElementById(
+            "skills"
+        );
+
+    const position =
+        skillsSection
+        .getBoundingClientRect()
+        .top;
+
+    if (
+        position <
+        window.innerHeight - 100
+        &&
+        !barsAnimated
+    ) {
+
+        skillBars.forEach(
+            function (bar) {
+
+                bar.style.width =
+                    bar.getAttribute(
+                        "data-width"
+                    );
 
             }
         );
 
+        barsAnimated = true;
+    }
+}
 
-        /* =========================================
-           TYPING EFFECT
-        ========================================== */
+window.addEventListener(
+    "scroll",
+    animateSkillBars
+);
 
-        const text =
-            "Student • Web Development • Programming";
-
-        const typing =
-            document.getElementById("typing");
-
-        let index = 0;
-
-        function typeText() {
-
-            if (index < text.length) {
-
-                typing.textContent +=
-                    text.charAt(index);
-
-                index++;
-
-                setTimeout(typeText, 60);
-            }
-        }
-
-        typeText();
+animateSkillBars();
 
 
-        /* =========================================
-           SCROLL REVEAL
-        ========================================== */
+/* =====================================================
+   BACK TO TOP
+===================================================== */
 
-        const reveals =
-            document.querySelectorAll(".reveal");
+const topBtn =
+    document.getElementById(
+        "topBtn"
+    );
 
-        function revealOnScroll() {
+window.addEventListener(
+    "scroll",
+    function () {
 
-            reveals.forEach(function (element) {
+        if (window.scrollY > 400) {
 
-                const windowHeight =
-                    window.innerHeight;
+            topBtn.style.display =
+                "block";
 
-                const elementTop =
-                    element.getBoundingClientRect().top;
+        } else {
 
-                if (
-                    elementTop <
-                    windowHeight - 80
-                ) {
-
-                    element.classList.add("show");
-
-                }
-
-            });
+            topBtn.style.display =
+                "none";
 
         }
 
-        window.addEventListener(
-            "scroll",
-            revealOnScroll
-        );
+    }
+);
 
-        revealOnScroll();
+topBtn.addEventListener(
+    "click",
+    function () {
 
+        window.scrollTo({
 
-        /* =========================================
-           3D CARD TILT
-        ========================================== */
+            top: 0,
 
-        const cards =
-            document.querySelectorAll(".card");
-
-        cards.forEach(function (card) {
-
-            card.addEventListener(
-                "mousemove",
-                function (event) {
-
-                    if (window.innerWidth <= 600) {
-                        return;
-                    }
-
-                    const rect =
-                        card.getBoundingClientRect();
-
-                    const x =
-                        event.clientX - rect.left;
-
-                    const y =
-                        event.clientY - rect.top;
-
-                    const centerX =
-                        rect.width / 2;
-
-                    const centerY =
-                        rect.height / 2;
-
-                    const rotateX =
-                        (centerY - y) / 22;
-
-                    const rotateY =
-                        (x - centerX) / 22;
-
-                    card.style.transform =
-                        `perspective(900px)
-                         rotateX(${rotateX}deg)
-                         rotateY(${rotateY}deg)
-                         translateY(-5px)`;
-
-                    card.style.setProperty(
-                        "--mouse-x",
-                        x + "px"
-                    );
-
-                    card.style.setProperty(
-                        "--mouse-y",
-                        y + "px"
-                    );
-
-                }
-            );
-
-
-            card.addEventListener(
-                "mouseleave",
-                function () {
-
-                    card.style.transform =
-                        "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
-
-                }
-            );
+            behavior: "smooth"
 
         });
 
-
-        /* =========================================
-           SKILL BAR ANIMATION
-        ========================================== */
-
-        const skillBars =
-            document.querySelectorAll(".bar span");
-
-        let barsAnimated = false;
-
-        function animateSkillBars() {
-
-            const skillsSection =
-                document.getElementById("skills");
-
-            const position =
-                skillsSection.getBoundingClientRect().top;
-
-            if (
-                position <
-                window.innerHeight - 100 &&
-                !barsAnimated
-            ) {
-
-                skillBars.forEach(function (bar) {
-
-                    bar.style.width =
-                        bar.getAttribute("data-width");
-
-                });
-
-                barsAnimated = true;
-            }
-        }
-
-        window.addEventListener(
-            "scroll",
-            animateSkillBars
-        );
+    }
+);
 
 
-        /* =========================================
-           BACK TO TOP
-        ========================================== */
+/* =====================================================
+   SCROLL PROGRESS
+===================================================== */
 
-        const topBtn =
-            document.getElementById("topBtn");
+window.addEventListener(
+    "scroll",
+    function () {
 
-        window.addEventListener(
-            "scroll",
-            function () {
+        const scrollTop =
+            window.scrollY;
 
-                if (window.scrollY > 400) {
+        const documentHeight =
+            document.documentElement
+            .scrollHeight -
+            window.innerHeight;
 
-                    topBtn.style.display =
-                        "block";
+        const percentage =
+            (scrollTop /
+            documentHeight) *
+            100;
 
-                } else {
+        document.getElementById(
+            "progressBar"
+        ).style.width =
+            percentage + "%";
 
-                    topBtn.style.display =
-                        "none";
+    }
+);
 
-                }
-
-            }
-        );
-
-        topBtn.addEventListener(
-            "click",
-            function () {
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
-            }
-        );
-
-
-        /* =========================================
-           SCROLL PROGRESS
-        ========================================== */
-
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                const scrollTop =
-                    window.scrollY;
-
-                const documentHeight =
-                    document.documentElement.scrollHeight -
-                    window.innerHeight;
-
-                const percentage =
-                    (scrollTop / documentHeight) * 100;
-
-                document.getElementById(
-                    "progressBar"
-                ).style.width =
-                    percentage + "%";
-
-            }
-        );
-
-    </script>
+</script>
 
 </body>
 </html>
