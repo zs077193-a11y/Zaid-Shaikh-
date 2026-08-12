@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website of Zaid Shaikh, a student interested in web development, HTML, CSS, Python and programming.">
+
+    <meta
+        name="description"
+        content="Official website of Zaid Shaikh, a student interested in web development, HTML, CSS, Python and programming."
+    >
 
     <title>Zaid Shaikh | Official Website</title>
 
@@ -11,157 +15,22 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-41JE6BPX2S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-41JE6BPX2S');
     </script>
 
     <style>
-        /* ===== ANIMATED PARTICLES ===== */
-@media (max-width: 600px) {
-    #mouseGlow {
-        display: none;
-    }
 
-    .particle {
-        opacity: 0.7;
-    }
-}
-#particles {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: -2;
-}
+        /* =========================================
+           RESET
+        ========================================= */
 
-.particle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: #a78bfa;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #8b5cf6;
-    animation: starMove linear infinite;
-}
-
-@keyframes starMove {
-    from {
-        transform: translateY(110vh);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 1;
-    }
-
-    85% {
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-10vh);
-        opacity: 0;
-    }
-}
-
-/* ===== MOUSE FOLLOW GLOW ===== */
-
-#mouseGlow {
-    position: fixed;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
-
-    background: radial-gradient(
-        circle,
-        rgba(139, 92, 246, 0.16) 0%,
-        rgba(6, 182, 212, 0.08) 35%,
-        transparent 70%
-    );
-
-    transform: translate(-50%, -50%);
-    transition: left 0.08s linear, top 0.08s linear;
-}
-        */* ===== WELCOME SCREEN ===== */
-
-#welcomeScreen {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: #050816;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: welcomeHide 1s ease forwards;
-    animation-delay: 2.5s;
-}
-
-.welcome-content {
-    animation: welcomeIn 1s ease;
-}
-
-.welcome-logo {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 20px;
-    border: 3px solid #38bdf8;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #38bdf8;
-    font-size: 25px;
-    font-weight: bold;
-    box-shadow: 0 0 35px rgba(56,189,248,0.5);
-}
-
-.welcome-content h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-.welcome-content p {
-    color: #cbd5e1;
-}
-
-.loader {
-    width: 45px;
-    height: 45px;
-    margin: 25px auto 0;
-    border: 3px solid #26334d;
-    border-top-color: #38bdf8;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes welcomeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes welcomeHide {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -171,140 +40,363 @@
             scroll-behavior: smooth;
         }
 
-        body 
-        <script>
-/* ===== CREATE PARTICLES ===== */
-
-const particles = document.getElementById("particles");
-
-for (let i = 0; i < 70; i++) {
-
-    const star = document.createElement("div");
-
-    star.classList.add("particle");
-
-    star.style.left = Math.random() * 100 + "%";
-
-    star.style.animationDuration =
-        (5 + Math.random() * 10) + "s";
-
-    star.style.animationDelay =
-        (Math.random() * 10) + "s";
-
-    const size = 1 + Math.random() * 3;
-
-    star.style.width = size + "px";
-    star.style.height = size + "px";
-
-    particles.appendChild(star);
-}
-
-
-/* ===== MOUSE FOLLOW GLOW ===== */
-
-const mouseGlow = document.getElementById("mouseGlow");
-
-document.addEventListener("mousemove", function(event) {
-
-    mouseGlow.style.left = event.clientX + "px";
-    mouseGlow.style.top = event.clientY + "px";
-
-});
-</script>
-        <div id="particles"></div>
-<div id="mouseGlow"></div>
-        <!-- WELCOME SCREEN -->
-<div id="welcomeScreen">
-    <div class="welcome-content">
-        <div class="welcome-logo">ZS</div>
-        <h1>Welcome 👋</h1>
-        <p>Welcome to Zaid Shaikh's Website</p>
-        <div class="loader"></div>
-    </div>
-</div>
-        {
+        body {
             font-family: Arial, sans-serif;
-            background: #050816;
+            background: #03030b;
             color: white;
             overflow-x: hidden;
         }
 
-        /* ===== ANIMATED BACKGROUND ===== */
+
+        /* =========================================
+           SCROLL PROGRESS
+        ========================================= */
+
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+            z-index: 10000;
+            box-shadow: 0 0 12px #8b5cf6;
+        }
+
+
+        /* =========================================
+           PARTICLES
+        ========================================= */
+
+        #particles {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -3;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: #a78bfa;
+            box-shadow: 0 0 10px #8b5cf6;
+            animation: starMove linear infinite;
+        }
+
+        @keyframes starMove {
+
+            from {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           MOUSE GLOW
+        ========================================= */
+
+        #mouseGlow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+
+            background: radial-gradient(
+                circle,
+                rgba(139, 92, 246, 0.18) 0%,
+                rgba(6, 182, 212, 0.08) 35%,
+                transparent 70%
+            );
+
+            transform: translate(-50%, -50%);
+            transition: left 0.08s linear, top 0.08s linear;
+        }
+
+
+        /* =========================================
+           WELCOME SCREEN
+        ========================================= */
+
+        #welcomeScreen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(76, 29, 149, 0.30),
+                    transparent 40%
+                ),
+                #03030b;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition:
+                opacity 0.8s ease,
+                visibility 0.8s ease;
+        }
+
+        #welcomeScreen.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            animation: welcomeIn 1s ease;
+        }
+
+        .welcome-logo {
+            width: 100px;
+            height: 100px;
+
+            margin: 0 auto 22px;
+
+            border: 3px solid #8b5cf6;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #a78bfa;
+            font-size: 28px;
+            font-weight: bold;
+
+            box-shadow:
+                0 0 30px rgba(139, 92, 246, 0.5),
+                0 0 70px rgba(6, 182, 212, 0.15);
+
+            animation: welcomeLogo 2s infinite ease-in-out;
+        }
+
+        .welcome-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-content p {
+            color: #cbd5e1;
+        }
+
+        .loader {
+            width: 45px;
+            height: 45px;
+
+            margin: 25px auto 0;
+
+            border: 3px solid #27213f;
+            border-top-color: #a78bfa;
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes welcomeIn {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes welcomeLogo {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* =========================================
+           BACKGROUND GLOW
+        ========================================= */
 
         body::before,
         body::after {
             content: "";
             position: fixed;
-            width: 280px;
-            height: 280px;
+
+            width: 300px;
+            height: 300px;
+
             border-radius: 50%;
-            filter: blur(90px);
+            filter: blur(100px);
+
             opacity: 0.15;
-            z-index: -1;
+
+            z-index: -2;
+
             animation: floating 8s infinite alternate ease-in-out;
         }
 
         body::before {
-            background: #38bdf8;
-            top: 10%;
-            left: -100px;
+            background: #7c3aed;
+            top: 5%;
+            left: -120px;
         }
 
         body::after {
-            background: #8b5cf6;
-            right: -100px;
-            bottom: 10%;
+            background: #06b6d4;
+            right: -120px;
+            bottom: 5%;
+
             animation-delay: 2s;
         }
 
         @keyframes floating {
+
             from {
                 transform: translateY(0);
             }
+
             to {
                 transform: translateY(100px);
             }
         }
 
-        /* ===== NAVBAR ===== */
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
 
         nav {
             position: sticky;
             top: 0;
+
             z-index: 1000;
-            background: rgba(8, 14, 30, 0.88);
-            backdrop-filter: blur(15px);
+
+            background: rgba(3, 3, 11, 0.82);
+            backdrop-filter: blur(18px);
+
             padding: 15px 10px;
+
             text-align: center;
-            border-bottom: 1px solid #26334d;
+
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+
+            box-shadow:
+                0 5px 30px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
+            position: relative;
+
+            display: inline-block;
+
             color: #e2e8f0;
             text-decoration: none;
-            margin: 0 9px;
+
+            margin: 5px 9px;
+
             font-weight: bold;
             font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            bottom: -7px;
+
+            width: 0;
+            height: 2px;
+
+            background: linear-gradient(
+                90deg,
+                #8b5cf6,
+                #06b6d4
+            );
+
+            transform: translateX(-50%);
+
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #38bdf8;
-            text-shadow: 0 0 12px #38bdf8;
+            color: #a78bfa;
+
+            text-shadow:
+                0 0 12px #8b5cf6;
         }
 
-        /* ===== HERO ===== */
+        nav a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
 
         .hero {
             min-height: 90vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
+
             padding: 40px 20px;
-            background:
-                radial-gradient(circle at center, #14254a 0%, #070b18 45%, #050816 100%);
+
             position: relative;
+
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(124, 58, 237, 0.25),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(6, 182, 212, 0.18),
+                    transparent 30%
+                );
         }
 
         .hero-content {
@@ -312,52 +404,79 @@ document.addEventListener("mousemove", function(event) {
         }
 
         @keyframes heroIn {
+
             from {
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* ===== LOGO ===== */
+
+        /* =========================================
+           MAIN LOGO
+        ========================================= */
 
         .logo {
-            width: 135px;
-            height: 135px;
+            width: 140px;
+            height: 140px;
+
             margin: 0 auto 25px;
+
             border-radius: 50%;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #0d1424;
-            border: 3px solid #38bdf8;
+
+            background: rgba(15, 10, 35, 0.8);
+
+            border: 3px solid #8b5cf6;
+
             box-shadow:
-                0 0 25px rgba(56,189,248,0.3),
-                inset 0 0 25px rgba(56,189,248,0.1);
+                0 0 30px rgba(139, 92, 246, 0.4),
+                inset 0 0 30px rgba(6, 182, 212, 0.12);
+
             animation: logoGlow 3s infinite ease-in-out;
         }
 
         .logo span {
-            font-size: 30px;
+            font-size: 31px;
             font-weight: bold;
-            color: #38bdf8;
+
+            color: #a78bfa;
+
             letter-spacing: 2px;
+
+            text-shadow:
+                0 0 15px #8b5cf6;
         }
 
         @keyframes logoGlow {
+
             0%, 100% {
                 transform: scale(1);
-                box-shadow: 0 0 25px rgba(56,189,248,0.25);
+
+                box-shadow:
+                    0 0 25px rgba(139, 92, 246, 0.3);
             }
 
             50% {
                 transform: scale(1.07);
-                box-shadow: 0 0 55px rgba(56,189,248,0.6);
+
+                box-shadow:
+                    0 0 55px rgba(139, 92, 246, 0.6);
             }
         }
+
+
+        /* =========================================
+           HERO TEXT
+        ========================================= */
 
         .hero h1 {
             font-size: 52px;
@@ -365,197 +484,489 @@ document.addEventListener("mousemove", function(event) {
         }
 
         .hero h1 span {
-            color: #38bdf8;
-            text-shadow: 0 0 20px rgba(56,189,248,0.35);
+            color: #a78bfa;
+
+            text-shadow:
+                0 0 10px rgba(139, 92, 246, 0.8),
+                0 0 30px rgba(6, 182, 212, 0.35);
         }
 
         .hero h3 {
             color: #cbd5e1;
+
             font-weight: normal;
+
             min-height: 25px;
+
             margin-bottom: 28px;
         }
 
-        /* ===== BUTTONS ===== */
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
 
         .button {
             display: inline-block;
+
             padding: 14px 27px;
-            background: #38bdf8;
-            color: #06101c;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #06b6d4
+                );
+
+            color: white;
+
             text-decoration: none;
+
             border-radius: 30px;
+
             font-weight: bold;
+
             margin: 6px;
+
             transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(56,189,248,0.15);
+
+            box-shadow:
+                0 8px 25px rgba(139, 92, 246, 0.25);
         }
 
         .button:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 12px 30px rgba(56,189,248,0.35);
+            transform:
+                translateY(-5px)
+                scale(1.04);
+
+            box-shadow:
+                0 12px 35px rgba(139, 92, 246, 0.45);
         }
 
         .instagram {
-            background: #e1306c;
-            color: white;
+            background:
+                linear-gradient(
+                    135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045
+                );
         }
 
         .instagram:hover {
-            background: #f45b8b;
-            box-shadow: 0 12px 30px rgba(225,48,108,0.3);
+            background:
+                linear-gradient(
+                    135deg,
+                    #a855f7,
+                    #fb7185,
+                    #fbbf24
+                );
         }
 
-        /* ===== SCROLL DOWN ===== */
+
+        /* =========================================
+           SCROLL DOWN
+        ========================================= */
 
         .scroll-down {
             position: absolute;
+
             bottom: 25px;
             left: 50%;
+
             transform: translateX(-50%);
+
             color: #94a3b8;
+
             font-size: 13px;
+
             animation: bounce 1.8s infinite;
         }
 
         @keyframes bounce {
+
             0%, 100% {
                 transform: translate(-50%, 0);
             }
+
             50% {
                 transform: translate(-50%, 10px);
             }
         }
 
-        /* ===== SECTIONS ===== */
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
 
         section {
             max-width: 950px;
+
             margin: 30px auto;
+
             padding: 35px 25px;
         }
 
+
+        /* =========================================
+           GLASS CARDS
+        ========================================= */
+
         .card {
-            background: rgba(13,20,36,0.88);
-            border: 1px solid #26334d;
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                rgba(12, 10, 28, 0.72);
+
+            border:
+                1px solid rgba(139, 92, 246, 0.28);
+
             border-radius: 20px;
+
             padding: 30px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-            transition: 0.4s;
+
+            backdrop-filter: blur(14px);
+
+            transform-style: preserve-3d;
+
+            transition:
+                transform 0.15s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.35);
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 45px rgba(56,189,248,0.12);
+        .card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 200px;
+            height: 200px;
+
+            left: var(--mouse-x, 50%);
+            top: var(--mouse-y, 50%);
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139, 92, 246, 0.20),
+                    transparent 70%
+                );
+
+            pointer-events: none;
         }
+
+        .card::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            border-radius: inherit;
+
+            border: 1px solid transparent;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139, 92, 246, 0.5),
+                    rgba(6, 182, 212, 0.2),
+                    transparent
+                ) border-box;
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            opacity: 0;
+
+            transition: 0.3s;
+
+            pointer-events: none;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+
+        /* =========================================
+           HEADINGS & TEXT
+        ========================================= */
 
         h2 {
-            color: #38bdf8;
+            color: #a78bfa;
+
             margin-bottom: 18px;
+
             font-size: 30px;
+
+            text-shadow:
+                0 0 15px rgba(139, 92, 246, 0.35);
         }
 
         p {
             color: #cbd5e1;
+
             line-height: 1.8;
         }
 
-        /* ===== SCROLL REVEAL ===== */
+
+        /* =========================================
+           SCROLL REVEAL
+        ========================================= */
 
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: 0.8s ease;
+
+            transform: translateY(45px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
         }
 
         .reveal.show {
             opacity: 1;
+
             transform: translateY(0);
         }
 
-        /* ===== SKILLS ===== */
+
+        /* =========================================
+           SKILLS
+        ========================================= */
 
         .skills {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 12px;
+
+            margin-top: 15px;
         }
 
         .skill {
             padding: 12px 18px;
-            background: #162139;
-            border: 1px solid #334155;
+
+            background:
+                rgba(20, 15, 45, 0.85);
+
+            border:
+                1px solid rgba(139, 92, 246, 0.3);
+
             border-radius: 25px;
+
             font-weight: bold;
+
             transition: 0.3s;
+
             cursor: default;
         }
 
         .skill:hover {
-            transform: translateY(-6px) scale(1.05);
-            border-color: #38bdf8;
-            box-shadow: 0 8px 25px rgba(56,189,248,0.2);
+            transform:
+                translateY(-6px)
+                scale(1.05);
+
+            background:
+                rgba(76, 29, 149, 0.35);
+
+            border-color: #a78bfa;
+
+            box-shadow:
+                0 8px 25px rgba(139, 92, 246, 0.25);
         }
 
-        /* ===== PROJECTS ===== */
+
+        /* =========================================
+           SKILL BARS
+        ========================================= */
+
+        .skill-bar {
+            margin-top: 18px;
+        }
+
+        .skill-title {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 7px;
+
+            color: #e2e8f0;
+
+            font-weight: bold;
+        }
+
+        .bar {
+            width: 100%;
+            height: 8px;
+
+            background: #17132a;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+
+            height: 100%;
+
+            width: 0;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #8b5cf6,
+                    #06b6d4
+                );
+
+            box-shadow:
+                0 0 15px rgba(139, 92, 246, 0.6);
+
+            transition:
+                width 1.5s ease;
+        }
+
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
 
         .project {
-            background: #162139;
+            background:
+                rgba(20, 15, 45, 0.75);
+
             border-radius: 15px;
+
             padding: 20px;
+
             margin-bottom: 15px;
-            border: 1px solid transparent;
+
+            border:
+                1px solid rgba(6, 182, 212, 0.15);
+
             transition: 0.3s;
         }
 
         .project:hover {
             transform: translateX(8px);
-            border-color: #38bdf8;
-            box-shadow: 0 8px 25px rgba(56,189,248,0.15);
+
+            border-color: #06b6d4;
+
+            box-shadow:
+                0 8px 30px rgba(6, 182, 212, 0.18);
         }
 
         .project h3 {
             margin-bottom: 8px;
         }
 
-        /* ===== FOOTER ===== */
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-buttons {
+            margin-top: 20px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
 
         footer {
             text-align: center;
+
             padding: 30px 15px;
-            background: #03050b;
+
+            background: #020207;
+
             color: #94a3b8;
+
             margin-top: 40px;
+
+            border-top:
+                1px solid rgba(139, 92, 246, 0.2);
         }
 
-        /* ===== TOP BUTTON ===== */
+
+        /* =========================================
+           BACK TO TOP
+        ========================================= */
 
         #topBtn {
             position: fixed;
+
             right: 20px;
             bottom: 20px;
-            width: 45px;
-            height: 45px;
+
+            width: 48px;
+            height: 48px;
+
             border: none;
+
             border-radius: 50%;
-            background: #38bdf8;
-            color: #06101c;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5cf6,
+                    #06b6d4
+                );
+
+            color: white;
+
             font-size: 20px;
             font-weight: bold;
+
             cursor: pointer;
+
             display: none;
+
             z-index: 999;
-            box-shadow: 0 5px 20px rgba(56,189,248,0.3);
+
+            box-shadow:
+                0 5px 25px rgba(139, 92, 246, 0.35);
         }
 
         #topBtn:hover {
             transform: translateY(-4px);
         }
 
-        /* ===== MOBILE ===== */
+
+        /* =========================================
+           MOBILE
+        ========================================= */
 
         @media (max-width: 600px) {
+
+            #mouseGlow {
+                display: none;
+            }
+
+            .particle {
+                opacity: 0.7;
+            }
 
             .hero {
                 min-height: 88vh;
@@ -570,7 +981,6 @@ document.addEventListener("mousemove", function(event) {
             }
 
             nav a {
-                display: inline-block;
                 margin: 5px 6px;
             }
 
@@ -581,6 +991,13 @@ document.addEventListener("mousemove", function(event) {
 
             .card {
                 padding: 22px;
+
+                transform: none !important;
+            }
+
+            .card::before,
+            .card::after {
+                display: none;
             }
 
             h2 {
@@ -591,27 +1008,80 @@ document.addEventListener("mousemove", function(event) {
                 width: 115px;
                 height: 115px;
             }
+
+            .welcome-content h1 {
+                font-size: 32px;
+            }
         }
+
     </style>
 </head>
-<script>
-setTimeout(function () {
-    document.getElementById("welcomeScreen").classList.add("hide");
-}, 2500);
-</script>
+
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- =========================================
+         PROGRESS BAR
+    ========================================== -->
+
+    <div id="progressBar"></div>
+
+
+    <!-- =========================================
+         PARTICLES
+    ========================================== -->
+
+    <div id="particles"></div>
+
+    <div id="mouseGlow"></div>
+
+
+    <!-- =========================================
+         WELCOME SCREEN
+    ========================================== -->
+
+    <div id="welcomeScreen">
+
+        <div class="welcome-content">
+
+            <div class="welcome-logo">
+                ZS
+            </div>
+
+            <h1>
+                Welcome 👋
+            </h1>
+
+            <p>
+                Welcome to Zaid Shaikh's Website
+            </p>
+
+            <div class="loader"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
     <nav>
+
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
     </nav>
 
-    <!-- HOME -->
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
     <div class="hero" id="home">
 
         <div class="hero-content">
@@ -626,7 +1096,10 @@ setTimeout(function () {
 
             <h3 id="typing"></h3>
 
-            <a class="button" href="#about">
+            <a
+                class="button"
+                href="#about"
+            >
                 Explore My Website 🚀
             </a>
 
@@ -638,11 +1111,21 @@ setTimeout(function () {
 
     </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="reveal">
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section
+        id="about"
+        class="reveal"
+    >
+
         <div class="card">
 
-            <h2>About Me 👤</h2>
+            <h2>
+                About Me 👤
+            </h2>
 
             <p>
                 Hello! My name is Zaid Shaikh.
@@ -652,49 +1135,146 @@ setTimeout(function () {
             </p>
 
         </div>
+
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="reveal">
+
+    <!-- =========================================
+         EDUCATION
+    ========================================== -->
+
+    <section
+        id="education"
+        class="reveal"
+    >
+
         <div class="card">
 
-            <h2>Education 🎓</h2>
+            <h2>
+                Education 🎓
+            </h2>
 
-            <p><strong>12th Standard</strong></p>
+            <p>
+                <strong>12th Standard</strong>
+            </p>
 
             <p>
                 Currently learning programming and web development.
             </p>
 
         </div>
+
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="reveal">
+
+    <!-- =========================================
+         SKILLS
+    ========================================== -->
+
+    <section
+        id="skills"
+        class="reveal"
+    >
+
         <div class="card">
 
-            <h2>My Skills 💻</h2>
+            <h2>
+                My Skills 💻
+            </h2>
 
             <div class="skills">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">Python</div>
-                <div class="skill">Web Development</div>
-                <div class="skill">Programming</div>
+
+                <div class="skill">
+                    HTML
+                </div>
+
+                <div class="skill">
+                    CSS
+                </div>
+
+                <div class="skill">
+                    Python
+                </div>
+
+                <div class="skill">
+                    Web Development
+                </div>
+
+                <div class="skill">
+                    Programming
+                </div>
+
+            </div>
+
+
+            <!-- SKILL BARS -->
+
+            <div class="skill-bar">
+
+                <div class="skill-title">
+                    <span>HTML & CSS</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="bar">
+                    <span data-width="90%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-bar">
+
+                <div class="skill-title">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="bar">
+                    <span data-width="70%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-bar">
+
+                <div class="skill-title">
+                    <span>Web Development</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="bar">
+                    <span data-width="80%"></span>
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="reveal">
+
+    <!-- =========================================
+         PROJECTS
+    ========================================== -->
+
+    <section
+        id="projects"
+        class="reveal"
+    >
+
         <div class="card">
 
-            <h2>My Projects 🚀</h2>
+            <h2>
+                My Projects 🚀
+            </h2>
 
             <div class="project">
 
-                <h3>🌐 Personal Website</h3>
+                <h3>
+                    🌐 Personal Website
+                </h3>
 
                 <p>
                     My personal website created using HTML and CSS.
@@ -702,9 +1282,12 @@ setTimeout(function () {
 
             </div>
 
+
             <div class="project">
 
-                <h3>🚀 Future Projects</h3>
+                <h3>
+                    🚀 Future Projects
+                </h3>
 
                 <p>
                     More exciting projects coming soon.
@@ -713,103 +1296,393 @@ setTimeout(function () {
             </div>
 
         </div>
+
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section
+        id="contact"
+        class="reveal"
+    >
+
         <div class="card">
 
-            <h2>Contact Me 📩</h2>
+            <h2>
+                Contact Me 📩
+            </h2>
 
             <p>
                 Thanks for visiting my website!
                 You can connect with me on Instagram.
             </p>
 
-            <div>
+            <div class="contact-buttons">
+
                 <a
                     class="button instagram"
                     href="https://www.instagram.com/zaid_shaikh_05_/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                >
                     Instagram 📸
                 </a>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- FOOTER -->
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
     <footer>
-        <p>© 2026 Zaid Shaikh. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Zaid Shaikh. All Rights Reserved.
+        </p>
+
     </footer>
 
-    <!-- TOP BUTTON -->
-    <button id="topBtn" onclick="goTop()">↑</button>
+
+    <!-- =========================================
+         TOP BUTTON
+    ========================================== -->
+
+    <button
+        id="topBtn"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
 
     <script>
 
-        /* ===== TYPING EFFECT ===== */
+        /* =========================================
+           WELCOME SCREEN
+        ========================================== */
 
-        const text = "Student • Web Development • Programming";
-        const typing = document.getElementById("typing");
+        setTimeout(function () {
+
+            const welcome =
+                document.getElementById("welcomeScreen");
+
+            if (welcome) {
+                welcome.classList.add("hide");
+            }
+
+        }, 2500);
+
+
+        /* =========================================
+           PARTICLES
+        ========================================== */
+
+        const particles =
+            document.getElementById("particles");
+
+        for (let i = 0; i < 70; i++) {
+
+            const star =
+                document.createElement("div");
+
+            star.classList.add("particle");
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+            star.style.animationDuration =
+                (5 + Math.random() * 10) + "s";
+
+            star.style.animationDelay =
+                (Math.random() * 10) + "s";
+
+            const size =
+                1 + Math.random() * 3;
+
+            star.style.width =
+                size + "px";
+
+            star.style.height =
+                size + "px";
+
+            particles.appendChild(star);
+        }
+
+
+        /* =========================================
+           MOUSE FOLLOW GLOW
+        ========================================== */
+
+        const mouseGlow =
+            document.getElementById("mouseGlow");
+
+        document.addEventListener(
+            "mousemove",
+            function (event) {
+
+                mouseGlow.style.left =
+                    event.clientX + "px";
+
+                mouseGlow.style.top =
+                    event.clientY + "px";
+
+            }
+        );
+
+
+        /* =========================================
+           TYPING EFFECT
+        ========================================== */
+
+        const text =
+            "Student • Web Development • Programming";
+
+        const typing =
+            document.getElementById("typing");
 
         let index = 0;
 
         function typeText() {
+
             if (index < text.length) {
-                typing.textContent += text.charAt(index);
+
+                typing.textContent +=
+                    text.charAt(index);
+
                 index++;
-                setTimeout(typeText, 65);
+
+                setTimeout(typeText, 60);
             }
         }
 
         typeText();
 
 
-        /* ===== SCROLL REVEAL ===== */
+        /* =========================================
+           SCROLL REVEAL
+        ========================================== */
 
-        const reveals = document.querySelectorAll(".reveal");
+        const reveals =
+            document.querySelectorAll(".reveal");
 
         function revealOnScroll() {
 
-            reveals.forEach(element => {
+            reveals.forEach(function (element) {
 
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight =
+                    window.innerHeight;
 
-                if (elementTop < windowHeight - 80) {
+                const elementTop =
+                    element.getBoundingClientRect().top;
+
+                if (
+                    elementTop <
+                    windowHeight - 80
+                ) {
+
                     element.classList.add("show");
+
                 }
 
             });
 
         }
 
-        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
         revealOnScroll();
 
 
-        /* ===== TOP BUTTON ===== */
+        /* =========================================
+           3D CARD TILT
+        ========================================== */
 
-        const topBtn = document.getElementById("topBtn");
+        const cards =
+            document.querySelectorAll(".card");
 
-        window.addEventListener("scroll", function() {
+        cards.forEach(function (card) {
 
-            if (window.scrollY > 400) {
-                topBtn.style.display = "block";
-            } else {
-                topBtn.style.display = "none";
-            }
+            card.addEventListener(
+                "mousemove",
+                function (event) {
+
+                    if (window.innerWidth <= 600) {
+                        return;
+                    }
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+                    const x =
+                        event.clientX - rect.left;
+
+                    const y =
+                        event.clientY - rect.top;
+
+                    const centerX =
+                        rect.width / 2;
+
+                    const centerY =
+                        rect.height / 2;
+
+                    const rotateX =
+                        (centerY - y) / 22;
+
+                    const rotateY =
+                        (x - centerX) / 22;
+
+                    card.style.transform =
+                        `perspective(900px)
+                         rotateX(${rotateX}deg)
+                         rotateY(${rotateY}deg)
+                         translateY(-5px)`;
+
+                    card.style.setProperty(
+                        "--mouse-x",
+                        x + "px"
+                    );
+
+                    card.style.setProperty(
+                        "--mouse-y",
+                        y + "px"
+                    );
+
+                }
+            );
+
+
+            card.addEventListener(
+                "mouseleave",
+                function () {
+
+                    card.style.transform =
+                        "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+
+                }
+            );
 
         });
 
-        function goTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+
+        /* =========================================
+           SKILL BAR ANIMATION
+        ========================================== */
+
+        const skillBars =
+            document.querySelectorAll(".bar span");
+
+        let barsAnimated = false;
+
+        function animateSkillBars() {
+
+            const skillsSection =
+                document.getElementById("skills");
+
+            const position =
+                skillsSection.getBoundingClientRect().top;
+
+            if (
+                position <
+                window.innerHeight - 100 &&
+                !barsAnimated
+            ) {
+
+                skillBars.forEach(function (bar) {
+
+                    bar.style.width =
+                        bar.getAttribute("data-width");
+
+                });
+
+                barsAnimated = true;
+            }
         }
+
+        window.addEventListener(
+            "scroll",
+            animateSkillBars
+        );
+
+
+        /* =========================================
+           BACK TO TOP
+        ========================================== */
+
+        const topBtn =
+            document.getElementById("topBtn");
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 400) {
+
+                    topBtn.style.display =
+                        "block";
+
+                } else {
+
+                    topBtn.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+        topBtn.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        /* =========================================
+           SCROLL PROGRESS
+        ========================================== */
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                const scrollTop =
+                    window.scrollY;
+
+                const documentHeight =
+                    document.documentElement.scrollHeight -
+                    window.innerHeight;
+
+                const percentage =
+                    (scrollTop / documentHeight) * 100;
+
+                document.getElementById(
+                    "progressBar"
+                ).style.width =
+                    percentage + "%";
+
+            }
+        );
 
     </script>
 
